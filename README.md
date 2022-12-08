@@ -1,8 +1,14 @@
 # MultiplicationTable
 
-This program outputs a "multiplication table" for the digits 1-10 multiplied by 1-10.
+This program outputs a multiplication table for the digits 1-10 multiplied by 1-10.
 
-## Usage/Examples
+# Features
+
+- Generates a multiplication table using loops
+
+# Example
+
+When the program is run, it will output the following multiplication table:
 
 ```
    1   2   3   4   5   6   7   8   9  10
@@ -18,8 +24,3 @@ This program outputs a "multiplication table" for the digits 1-10 multiplied by 
 
   Press any key to close this window . . .
 ```
-
-### Program Logic
-
-- Calculate the multiples of 10
-- Align the results
