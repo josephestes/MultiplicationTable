@@ -13,22 +13,26 @@ namespace MultiplicationTable
     {
         static void Main(string[] args)
         {
-            //Set 10 as multiple limit and create variables to store the table axes factors
+            // Set 10 as multiple limit
             const int MULTIPLE = 10;
-            int digitsX;
-            int digitsY;
 
-            //Loops create each value in each row of the multiplication table
-            for (digitsY = 1; digitsY <= MULTIPLE; ++digitsY)
+            // Create the multiplication table
+            var table = new string[MULTIPLE];
+
+            for (int digitsY = 1; digitsY <= MULTIPLE; ++digitsY)
             {
-                //Calculate, align, and output values in a row
-                for (digitsX = 1; digitsX <= MULTIPLE; ++digitsX)
+                var row = new string[MULTIPLE];
+
+                for (int digitsX = 1; digitsX <= MULTIPLE; ++digitsX)
                 {
-                    Write("{0,4}", (digitsY * digitsX));
+                    row[digitsX - 1] = string.Format("{0,4}", digitsY * digitsX);
                 }
-                //Separate each row of values
-                WriteLine();
+
+                table[digitsY - 1] = string.Join("", row);
             }
+
+            // Output the multiplication table
+            WriteLine(string.Join(Environment.NewLine, table));
         }
     }
 }
